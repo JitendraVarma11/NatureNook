@@ -1,13 +1,21 @@
 import React from "react";
 import img4 from "../../src/assets/journal/sky.jpg";
 import dish from "../../src/assets/journal/dishwasher.jpg";
-import Cutlery from "./Cutlery";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function Journal() {
+
+    const navigate = useNavigate();
+  
+    const handleChange = (event) => {
+      const value = event.target.value;
+      if (value) {
+        navigate(value);
+      }
+    };
+
   return (
     <div>
-      {/* top image part */}
       <img
         src={img4}
         alt="Nature image"
@@ -25,34 +33,34 @@ export default function Journal() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-row justify-between items-center p-5 mt-5">
           <h1 className="text-3xl font-semibold">Blogs</h1>
-          <select className="block w-1/3 p-2 text-xl font-semibold mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+          <select className="block w-1/3 p-2 text-xl font-semibold mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" onChange={handleChange}>
             <option value="">All Categories</option>
-            <option value=""><Link to={Cutlery}>Bamboo Cutlery</Link></option>
-            <option value="bamboo-product">Bamboo Products </option>
-            <option value="coconut-bowl">Coconut Bowl</option>
-            <option value="coconut-candle">Coconut Shell Candles</option>
-            <option value="ethical-sorcing">Ethical Sourcing</option>
-            <option value="gift-guide">Gift Guide</option>
-            <option value="healthy-eating">Healthy Eating</option>
-            <option value="grow-bamboo">How to grow bamboo</option>
-            <option value="How to guide">How To Guide</option>
-            <option value="interviews">Interviews</option>
-            <option value="soaps">Natural Soaps</option>
-            <option value="pruduct-guide">Product Care Guide</option>
-            <option value="recipes">Recipes</option>
-            <option value="resusable-straws">Reusable Starws</option>
-            <option value="shaving-soap">Shaving Soaps</option>
-            <option value="How to guide">How To Guide</option>
-            <option value="life">Sustainable Lifestyle</option>
-            <option value="shaving">Sustainable shaving</option>
-            <option value="waste-business">Zero Waste Business Guides</option>
-            <option value="waste-cleaning">Zero Waste Cleaning</option>
-            <option value="waste-diy">Zero Waste DIY</option>
-            <option value="waste-kitchen">Zero Waste Kitchen</option>
-            <option value="waste-product">Zero Waste Products</option>
-            <option value="waste-swaps">Zero Waste Swaps</option>
-            <option value="waste-tips">Zero Waste Tips</option>
-            <option value="waste-travel">Zero Waste Travel</option>
+            <option value="/cutlery">Bamboo Cutlery</option>
+            <option value="/bamboo">Bamboo Products </option>
+            <option value="/coconut">Coconut Bowl</option>
+            <option value="/candle">Coconut Shell Candles</option>
+            <option value="/ethical-sorcing">Ethical Sourcing</option>
+            <option value="/gift-guide">Gift Guide</option>
+            <option value="/healthy-eating">Healthy Eating</option>
+            <option value="/bamboo">How to grow bamboo</option>
+            <option value="/How-to-guide">How To Guide</option>
+            <option value="/interviews">Interviews</option>
+            <option value="/soaps">Natural Soaps</option>
+            <option value="/pruduct-guide">Product Care Guide</option>
+            <option value="/recipes">Recipes</option>
+            <option value="/straws">Reusable Starws</option>
+            <option value="/soap">Shaving Soaps</option>
+            <option value="/How to guide">How To Guide</option>
+            <option value="/life">Sustainable Lifestyle</option>
+            <option value="/shaving">Sustainable shaving</option>
+            <option value="/waste-business">Zero Waste Business Guides</option>
+            <option value="/waste-cleaning">Zero Waste Cleaning</option>
+            <option value="/waste-diy">Zero Waste DIY</option>
+            <option value="/waste-kitchen">Zero Waste Kitchen</option>
+            <option value="/waste-product">Zero Waste Products</option>
+            <option value="/waste-swaps">Zero Waste Swaps</option>
+            <option value="/waste-tips">Zero Waste Tips</option>
+            <option value="/waste-travel">Zero Waste Travel</option>
           </select>
         </div>
       </div>

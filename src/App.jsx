@@ -25,6 +25,7 @@ import ZeroWaste from "../Components/Journal/ZeroWaste";
 import Straws from "../Components/Journal/Straws";
 import Life from "../Components/Journal/Life";
 import Soaps from "../Components/Products/Soaps/Soaps";
+import Error from "../Components/Auth/Error";
 
 function App() {
   const router = createBrowserRouter(
@@ -38,7 +39,7 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="product/:category" element={<Product />} />
         
-        <Route path='/journal' element={<Journal/>}/>
+        <Route path='/journal' element={<Blogs/>}/>
         <Route path='/cutlery' element={<Cutlery/>}/>
         <Route path='/blogs' element={<Blogs/>}/>
         <Route path='/razor' element={<Razor/>}/>
@@ -53,6 +54,7 @@ function App() {
 
         <Route path="contact" element={<Contact/>} />
 
+        <Route path="*" element={<Error/>}/>
       </Route>  
     )
   );

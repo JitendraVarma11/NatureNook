@@ -116,7 +116,7 @@ export default function Footer() {
               <Link to="#" className="text-gray-500 hover:text-[#036570]">
                 <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
               </Link>
-              <Link to="https://github.com/rishitgondaliya" className="text-gray-500 hover:text-[#036570]">
+              <Link to="#" className="text-gray-500 hover:text-[#036570]">
                 <FontAwesomeIcon icon={faGithub} className="text-2xl" />
               </Link>
               <Link to="#" className="text-gray-500 hover:text-[#036570]">
